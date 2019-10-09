@@ -20,11 +20,11 @@
                 <nav id="menu">
                     <h1>Menu Principal</h1>
                     <ul type="circle">
-                        <li><a href="index.html"></a>Home</li>
-                        <li><a href="specs.html">Especificações</a></li>
-                        <li><a href="fotos.html">Fotos</a></li>
-                        <li><a href="multimidia.html">Multimídia</a></li>
-                        <li><a href="fale-conosco.html">Fale conosco</a></li>
+                        <li id="home"><a href="index.html">Home</a></li>
+                        <li id="especificacoes"><a href="specs.html">Especificações</a></li>
+                        <li id="fotos"><a href="fotos.html">Fotos</a></li>
+                        <li id="multimidia"><a href="multimidia.html">Multimídia</a></li>
+                        <li id="contato"><a href="fale-conosco.html">Fale conosco</a></li>
                     </ul>
                 </nav>
             </header>
@@ -66,7 +66,7 @@
                     <h2>Como funciona</h2>
                     <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça</p>
                 
-                    <h2>O que você pode fazer com o Google Glasses</h2>
+                    <h2>O que você pode fazer com o Google Glass</h2>
                     <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
                 
                     [AQUI ENTRA UM VÍDEO]
@@ -93,5 +93,17 @@
                 </p>
             </footer>
         </div>
+        <script>
+            var itens = document.querySelectorAll('nav#menu li');
+            var img = document.querySelector('img#icone');
+            for(let i = 0; i < itens.length; i++){
+                itens[i].addEventListener('mousemove', function(e){
+                    img.src = "_imagens/" + this.id + ".png";
+                });
+                itens[i].addEventListener('mouseout', function(e){
+                    img.src = "_imagens/glass-oculos-preto-peq.png";
+                });
+            }
+        </script>
     </body>
 </html>
