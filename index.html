@@ -93,17 +93,6 @@
                 </p>
             </footer>
         </div>
-        <script>
-            var itens = document.querySelectorAll('nav#menu li');
-            var img = document.querySelector('img#icone');
-            for(let i = 0; i < itens.length; i++){
-                itens[i].addEventListener('mousemove', function(e){
-                    img.src = "_imagens/" + this.id + ".png";
-                });
-                itens[i].addEventListener('mouseout', function(e){
-                    img.src = "_imagens/glass-oculos-preto-peq.png";
-                });
-            }
-        </script>
+        <script src="_javascript/funcoes.js"></script>
     </body>
 </html>
