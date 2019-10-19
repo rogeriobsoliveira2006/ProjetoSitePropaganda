@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Tudo Sobre Google Glass</title>
         <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" href="_css/form.css">
     </head>
     <body>
         <div id="interface">
@@ -28,38 +29,128 @@
                     </ul>
                 </nav>
             </header>
-            Fale Conosco > Contato
-            Formulário de Contato
-            por Rogério Oliveira
-            Atualizado em 06/Outubro/2019
-            
-            Identificação do Usuário
-                Nome:
-                Senha:
-                E-mail:
-                Sexo:
-                    - Masculino
-                    - Feminino
-                Data de Nascimento:
-            
-            Endereço do Usuário
-                Logradouro:
-                Número:
-                Estado:
-                Cidade:
-            
-            Mensagem do Usuário
-                Grau de Urgência:
-                Mensagem:
-            
-            Quero um Google Glass
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
-            
-            
-            [BOTÃO ENVIAR]
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Rogério Oliveira</h2>
+                            <h3 class="direita">Atualizado em 11/Outubro/2019</h3>
+                        </hgroup>
+                    </header>
+                    <form method="POST" id="fContato" action="">
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"> </p>
+                            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"> </p>
+                            <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="fulanodetal@contoso.com"> </p>
+                            <fieldset id="sexo">
+                                <legend>Sexo</legend>
+                                    <input type="radio" name="tSexo" id="cMasc" checked> <label for="cMasc">Masculino</label><br>
+                                    <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
+                            </fieldset>
+                            <p><label for="cDTNasc">Data de Nascimento:</label> <input type="date" name="tDTNasc" id="cDTNasc" size="10"> </p>
+                        </fieldset>
+                        
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="20" maxlength="88" placeholder="Rua, Travessa, Avenida..."></p>
+                                <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                                <p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
+                                    <optgroup label="Região Sudeste">
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="MG">Minas Gerais</option>
+                                    </optgroup>
+                                    <optgroup label="Região Sul">
+                                        <option value="PR">Paraná</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                    </optgroup>
+                                    <optgroup label="Região Nordeste">
+                                        <option value="BA">Bahia</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="PB">Paraíba</option>
+                                    </optgroup>
+                                    <optgroup label="Região Centro-Oeste">
+                                        <option value="TO">Tocantis</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MT">Mato Grosso</option>
+                                    </optgroup>
+                                    <optgroup label="Região Norte">
+                                        <option value="PA">Pará</option>
+                                        <option value="RO">Rondônia</option>
+                                    </optgroup>                                    
+                                </select></p>
+                                <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                                <datalist id="cidades">
+                                    <option value="Rio de Janeiro"></option>
+                                    <option value="Nova Iguaçu"></option>
+                                    <option value="Belford Roxo"></option>
+                                    <option value="Ribeirão Preto"></option>
+                                    <option value="Campinas"></option>
+                                    <option value="Sorocaba"></option>
+                                    <option value="Uberlândia"></option>
+                                    <option value="Araxá"></option>
+                                    <option value="Contagem"></option>
+                                    <option value="Maringá"></option>
+                                    <option value="Londrina"></option>
+                                    <option value="Ponta Grossa"></option>
+                                    <option value="Chapecó"></option>
+                                    <option value="Blumenau"></option>
+                                    <option value="Lages"></option>
+                                    <option value="Bom Jesus da Lapa"></option>
+                                    <option value="Itabuna"></option>
+                                    <option value="Feira de Santana"></option>
+                                    <option value="Picos"></option>
+                                    <option value="Campo Maior"></option>
+                                    <option value="Piripiri"></option>
+                                    <option value="Codó"></option>
+                                    <option value="Caxias"></option>
+                                    <option value="Bacabal"></option>
+                                    <option value="Cabrobó"></option>
+                                    <option value="Caruaru"></option>
+                                    <option value="Garanhuns"></option>
+                                    <option value="Iguatú"></option>
+                                    <option value="Icó"></option>
+                                    <option value="Crato"></option>
+                                    <option value="Guarabira"></option>
+                                    <option value="Patos"></option>
+                                    <option value="Araguaína"></option>
+                                    <option value="Curupi"></option>
+                                    <option value="Anápolis"></option>
+                                    <option value="Trindade"></option>
+                                    <option value="Bela Vista"></option>
+                                    <option value="Dourados"></option>
+                                    <option value="Marabá"></option>
+                                    <option value="Novo Progresso"></option>
+                                    <option value="Ji-Paraná"></option>
+                                    <option value="Ariquemes"></option>
+                                </datalist>
+                        </fieldset>
+                        
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                                <p><label for="cUrg">Grau de Urgência:</label> Mín <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Máx</p>
+                                <p><label for="cMsg">Mensagem:</label> <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                        </fieldset>
+                        
+                        <fieldset id="pedido">
+                            <legend>Quero um Google Glass</legend>
+                                <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                                <p><label for="cCor">Cor:</label></p>
+                                <p><label for="cQtd">Quantidade:</label></p>
+                                <p><label for="cTot">Preço Total: R$</label></p>
+                        </fieldset>
+                        
+                        [BOTÃO ENVIAR]
+                    </form>
+                </article>
+            </section>
             <footer id="rodape">
                 <p>
                     Copyright &copy; 2019 - by Rogério Oliveira <br>
