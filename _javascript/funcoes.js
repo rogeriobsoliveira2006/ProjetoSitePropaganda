@@ -36,3 +36,10 @@ for(let i = 0; i < itens.length; i++){
         }
     });
 }
+
+var qtd = document.querySelector('input#cQtd');
+qtd.addEventListener('input',function(){
+    var auxQtd = parseInt(qtd.value);
+    tot = auxQtd * 1500;
+    document.querySelector('input#cTot').value = tot;
+})
