@@ -23,6 +23,6 @@ video#filme{
 iframe#filme-youtube{
     display: block;
     position: relative;
-    left: 85px;
+    left: 80px;
     top: 50px;
 }
